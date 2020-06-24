@@ -1,0 +1,17 @@
+name: Jest Reporter
+description: Jest action adding checks and annotations to your pull requests.
+branding:
+  icon: check
+  color: green
+inputs:
+  github-token:
+    description: Github Token
+    required: true
+  result-file:
+    description: jest result file path for json
+    required: false
+    default: result.json
+
+runs:
+  using: node12
+  main: dist/index.js

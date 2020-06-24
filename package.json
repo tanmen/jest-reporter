@@ -1,0 +1,31 @@
+{
+  "name": "jest-reporter",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "author": "tanmen <yt.prog@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "typesync && yarn check --integrity || yarn",
+    "prebuild": "depcheck",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^3.0.0",
+    "@jest/test-result": "^26.1.0",
+    "fs-extra": "^9.0.1",
+    "strip-ansi": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.1",
+    "@types/jest": "^26.0.0",
+    "depcheck": "^0.9.2",
+    "jest": "^26.1.0",
+    "jest-watch-typeahead": "^0.6.0",
+    "ts-jest": "^26.1.1",
+    "typescript": "^3.9.5",
+    "typesync": "^0.7.0"
+  }
+}
