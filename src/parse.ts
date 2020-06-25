@@ -1,6 +1,6 @@
 import {FormattedTestResults} from "@jest/test-result";
 
-type AssertionResult = {
+export type AssertionResult = {
   path: string;
   location: {
     line: number;

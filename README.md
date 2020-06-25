@@ -25,6 +25,15 @@ The location of the json file.
 ./result.json
 ```
 
+### `action-name` - *optional*
+The action names. Make sure this name is unique within the workflow.
+If it is not unique, it will be overwritten.
+
+#### default value
+```
+jest report
+```
+
 ## `jest` Configuration
 ```shell script
 jest --json --outputFile=result.json --testLocationInResults

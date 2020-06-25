@@ -11,6 +11,10 @@ inputs:
     description: jest result file path for json
     required: false
     default: result.json
+  action-name:
+    description: Display name. Make sure this name is unique within the workflow.
+    required: false
+    default: jest report
 
 runs:
   using: node12

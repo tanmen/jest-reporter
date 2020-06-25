@@ -3,17 +3,17 @@ on: push
 
 jobs:
   tests:
+    strategy:
+      matrix:
+        version: [12.x, 14.x]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
       - run: yarn
       - run: yarn build
       - run: yarn test --json --outputFile=result.json --testLocationInResults
       - uses: ./
         if: always()
         with:
+          action-name: jest report (${{ matrix.version }})
           github-token: ${{ secrets.GITHUB_TOKEN }}
