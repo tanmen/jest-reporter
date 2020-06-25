@@ -9,7 +9,9 @@
     "postinstall": "typesync && yarn check --integrity || yarn",
     "prebuild": "depcheck",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "pack": "ncc build dist/index.js",
+    "prepack": "yarn build"
   },
   "dependencies": {
     "@actions/core": "^1.2.4",
@@ -21,6 +23,7 @@
   "devDependencies": {
     "@types/fs-extra": "^9.0.1",
     "@types/jest": "^26.0.0",
+    "@zeit/ncc": "^0.22.3",
     "depcheck": "^0.9.2",
     "jest": "^26.1.0",
     "jest-watch-typeahead": "^0.6.0",
