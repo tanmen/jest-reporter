@@ -1,7 +1,7 @@
 export const Errors = {
   REQUIRED: 'Please set',
   NOT_FOUND: 'No such file',
-  UNSUPPORTED: 'Unsupported format',
+  UNSUPPORTED: 'Unsupported format'
 }
 
 export class ReporterError extends Error {

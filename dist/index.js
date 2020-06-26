@@ -4233,18 +4233,12 @@ const github_1 = __webpack_require__(861);
 const strip_ansi_1 = __importDefault(__webpack_require__(90));
 const config_1 = __webpack_require__(145);
 const uuid_1 = __webpack_require__(62);
+const core_1 = __webpack_require__(470);
 const sha = (_b = (_a = github_1.context.payload.pull_request) === null || _a === void 0 ? void 0 : _a.head.sha) !== null && _b !== void 0 ? _b : github_1.context.sha;
 const octokit = github_1.getOctokit(config_1.githubToken);
 const home = `${process.cwd()}/`;
-exports.report = async ({ success, total, time, passed, failed, results }) => octokit
-    .checks
-    .create({
-    ...github_1.context.repo,
-    head_sha: sha,
-    name: strip_ansi_1.default(config_1.actionName),
-    conclusion: success ? 'success' : 'failure',
-    external_id: uuid_1.v4(),
-    output: {
+exports.report = async ({ success, total, time, passed, failed, results }) => {
+    const output = {
         title: 'Jest Test Results',
         summary: '#### These are all the test results I was able to find from your jest report\n' +
             `**${total}** tests were completed in **${time}s** with **${passed}** passed and **${failed}** failed tests.`,
@@ -4252,13 +4246,26 @@ exports.report = async ({ success, total, time, passed, failed, results }) => oc
         annotations: results.map(result => ({
             path: result.path.replace(home, ''),
             start_line: result.location.line,
-            end_line: result.location.column,
+            end_line: result.location.line,
+            start_column: result.location.column,
+            end_column: result.location.column,
             annotation_level: 'failure',
             title: result.title,
             message: strip_ansi_1.default(result.message)
         }))
-    }
-});
+    };
+    core_1.debug(`[output]${JSON.stringify(output, undefined, 2)}`);
+    return octokit
+        .checks
+        .create({
+        ...github_1.context.repo,
+        head_sha: sha,
+        name: strip_ansi_1.default(config_1.actionName),
+        conclusion: success ? 'success' : 'failure',
+        external_id: uuid_1.v4(),
+        output
+    });
+};
 
 
 /***/ }),
@@ -4855,15 +4862,12 @@ function errname(uv, code) {
 
 "use strict";
 
-var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = __webpack_require__(470);
 const readResult_1 = __webpack_require__(932);
 const config_1 = __webpack_require__(145);
 const report_1 = __webpack_require__(335);
 const parse_1 = __webpack_require__(904);
-core_1.debug(JSON.stringify(Object.keys(process.env)));
-core_1.debug((_a = process.env.GITHUB_JOB) !== null && _a !== void 0 ? _a : '');
 readResult_1.readResult(config_1.resultFile)
     .then(result => report_1.report(parse_1.parse(result)))
     .then(response => core_1.debug(JSON.stringify(response)))
@@ -9842,7 +9846,7 @@ exports.ReporterError = exports.Errors = void 0;
 exports.Errors = {
     REQUIRED: 'Please set',
     NOT_FOUND: 'No such file',
-    UNSUPPORTED: 'Unsupported format',
+    UNSUPPORTED: 'Unsupported format'
 };
 class ReporterError extends Error {
     constructor(code, value) {
