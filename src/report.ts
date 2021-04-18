@@ -38,4 +38,9 @@ export const report = async ({success, total, time, passed, failed, results}: Re
       external_id: v4(),
       output
     })
+    .catch(e => {
+      if (e.message === 'Resource not accessible by integration')
+        throw new Error('This library requires the write permission of checks to operate.');
+      throw e;
+    })
 };
