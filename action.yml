@@ -14,7 +14,7 @@ inputs:
   action-name:
     description: Display name. Make sure this name is unique within the workflow.
     required: false
-    default: jest report
+    default: Jest Test Results
 
 runs:
   using: node12
