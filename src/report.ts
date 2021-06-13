@@ -1,9 +1,9 @@
+import {debug, warning} from "@actions/core";
 import {context, getOctokit} from "@actions/github";
 import stripAnsi from "strip-ansi";
+import {v4} from "uuid";
 import {actionName, githubToken} from "./config";
 import {Results} from "./parse";
-import {v4} from "uuid";
-import {debug} from "@actions/core";
 
 const sha = context.payload.pull_request?.head.sha ?? context.sha;
 const octokit = getOctokit(githubToken);
@@ -40,7 +40,8 @@ export const report = async ({success, total, time, passed, failed, results}: Re
     })
     .catch(e => {
       if (e.message === 'Resource not accessible by integration')
-        throw new Error('This library requires the write permission of checks to operate.');
-      throw e;
+        warning('This library requires the write permission of checks to operate.\n  Skip write check step.');
+      else
+        throw e;
     })
 };

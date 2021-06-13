@@ -1,13 +1,10 @@
-import {debug, error, setFailed} from "@actions/core";
-import {readResult} from "./readResult";
+import {debug, setFailed} from "@actions/core";
 import {resultFile} from "./config";
-import {report} from "./report";
 import {parse} from "./parse";
+import {readResult} from "./readResult";
+import {report} from "./report";
 
 readResult(resultFile)
   .then(result => report(parse(result)))
   .then(response => debug(JSON.stringify(response)))
-  .catch(e => {
-    error(e);
-    setFailed(e.message);
-  });
+  .catch(e => setFailed(e.message));
