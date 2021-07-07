@@ -2351,10 +2351,13 @@ exports.report = async ({ success, total, time, passed, failed, results }) => {
         name: strip_ansi_1.default(config_1.actionName),
         conclusion: success ? 'success' : 'failure',
         external_id: uuid_1.v4(),
+        workflow_name: github_1.context.workflow,
+        workflow_run_id: github_1.context.runId || -1,
+        job_name: github_1.context.job,
         output
     })
-        .catch(e => {
-        if (e.message === 'Resource not accessible by integration')
+        .catch((e) => {
+        if (e instanceof Error && e.message === 'Resource not accessible by integration')
             core_1.warning('This library requires the write permission of checks to operate.\n  Skip write check step.');
         else
             throw e;

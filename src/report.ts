@@ -1,4 +1,4 @@
-import {debug, warning} from "@actions/core";
+import {debug,  warning} from "@actions/core";
 import {context, getOctokit} from "@actions/github";
 import stripAnsi from "strip-ansi";
 import {v4} from "uuid";
@@ -27,7 +27,9 @@ export const report = async ({success, total, time, passed, failed, results}: Re
         message: stripAnsi(result.message)
       }))
   };
+
   debug(`[output]${JSON.stringify(output, undefined, 2)}`);
+
   return octokit
     .checks
     .create({
@@ -36,10 +38,13 @@ export const report = async ({success, total, time, passed, failed, results}: Re
       name: stripAnsi(actionName),
       conclusion: success ? 'success' : 'failure',
       external_id: v4(),
+      workflow_name: context.workflow,
+      workflow_run_id: context.runId || -1,
+      job_name: context.job,
       output
     })
-    .catch(e => {
-      if (e.message === 'Resource not accessible by integration')
+    .catch((e: Error | string) => {
+      if (e instanceof Error && e.message === 'Resource not accessible by integration')
         warning('This library requires the write permission of checks to operate.\n  Skip write check step.');
       else
         throw e;
