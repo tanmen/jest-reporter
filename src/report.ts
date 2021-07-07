@@ -9,6 +9,7 @@ const sha = context.payload.pull_request?.head.sha ?? context.sha;
 const octokit = getOctokit(githubToken);
 const home = `${process.cwd()}/`;
 
+console.log(v4())
 export const report = async ({success, total, time, passed, failed, results}: Results) => {
   const output = {
     title: 'Jest Test Results',
@@ -37,7 +38,7 @@ export const report = async ({success, total, time, passed, failed, results}: Re
       head_sha: sha,
       name: stripAnsi(actionName),
       conclusion: success ? 'success' : 'failure',
-      external_id: v4(),
+      external_id: context.job,
       workflow_name: context.workflow,
       workflow_run_id: context.runId || -1,
       job_name: context.job,

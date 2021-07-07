@@ -2325,6 +2325,7 @@ const config_1 = __webpack_require__(145);
 const sha = (_b = (_a = github_1.context.payload.pull_request) === null || _a === void 0 ? void 0 : _a.head.sha) !== null && _b !== void 0 ? _b : github_1.context.sha;
 const octokit = github_1.getOctokit(config_1.githubToken);
 const home = `${process.cwd()}/`;
+console.log(uuid_1.v4());
 exports.report = async ({ success, total, time, passed, failed, results }) => {
     const output = {
         title: 'Jest Test Results',
@@ -2350,7 +2351,7 @@ exports.report = async ({ success, total, time, passed, failed, results }) => {
         head_sha: sha,
         name: strip_ansi_1.default(config_1.actionName),
         conclusion: success ? 'success' : 'failure',
-        external_id: uuid_1.v4(),
+        external_id: github_1.context.job,
         workflow_name: github_1.context.workflow,
         workflow_run_id: github_1.context.runId || -1,
         job_name: github_1.context.job,
