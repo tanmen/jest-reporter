@@ -29,6 +29,7 @@ export const report = async ({success, total, time, passed, failed, results}: Re
   };
   debug(`[output]${JSON.stringify(output, undefined, 2)}`);
   return octokit
+    .rest
     .checks
     .create({
       ...context.repo,
