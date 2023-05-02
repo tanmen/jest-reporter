@@ -11,7 +11,8 @@
     "build": "tsc",
     "test": "jest",
     "pack": "ncc build dist/index.js",
-    "prepack": "yarn build"
+    "prepack": "yarn build",
+    "release": "yarn run pack && semantic-release"
   },
   "dependencies": {
     "@actions/core": "^1.10.0",
