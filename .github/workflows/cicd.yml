@@ -21,6 +21,7 @@ jobs:
           action-name: jest report (${{ matrix.version }})
           github-token: ${{ secrets.GITHUB_TOKEN }}
   release:
+    if: ${{ github.event_name != 'pull_request' }}
     needs: [ tests ]
     runs-on: ubuntu-latest
     permissions:
