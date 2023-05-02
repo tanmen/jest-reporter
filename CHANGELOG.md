@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/tanmen/jest-reporter/compare/v1.0.2...v1.0.3) (2023-05-02)
+
+
+### Bug Fixes
+
+* add token ([8b3ccd2](https://github.com/tanmen/jest-reporter/commit/8b3ccd26d9c49617bd7cc6714d2a76e751e4fd99))
+* remove token test ([bab9168](https://github.com/tanmen/jest-reporter/commit/bab91681046d24e630e52984e108b754062e151a))
+
 ## [1.0.2](https://github.com/tanmen/jest-reporter/compare/v1.0.1...v1.0.2) (2023-05-02)
 
 
