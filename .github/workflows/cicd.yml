@@ -1,0 +1,48 @@
+name: Test
+on:
+  push:
+    branches: [ main ]
+  pull_request: {}
+
+jobs:
+  tests:
+    strategy:
+      matrix:
+        version: [16.x, 18.x]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn
+      - run: yarn build
+      - run: yarn test --json --outputFile=result.json --testLocationInResults
+      - uses: ./
+        if: always()
+        with:
+          action-name: jest report (${{ matrix.version }})
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+  release:
+    needs: [ tests ]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for npm provenance
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.node-version'
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --prefer-offline
+      - name: Release
+        run: yarn semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
