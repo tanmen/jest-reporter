@@ -1,12 +1,27 @@
-name: Release
+name: Test
 on:
   push:
-    branches:
-      - master
-permissions:
-  contents: read
+    branches: [ main ]
+  pull_request: {}
+
 jobs:
+  tests:
+    strategy:
+      matrix:
+        version: [16.x, 18.x]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn
+      - run: yarn build
+      - run: yarn test --json --outputFile=result.json --testLocationInResults
+      - uses: ./
+        if: always()
+        with:
+          action-name: jest report (${{ matrix.version }})
+          github-token: ${{ secrets.GITHUB_TOKEN }}
   release:
+    needs: [ tests ]
     runs-on: ubuntu-latest
     permissions:
       contents: write # to be able to publish a GitHub release
