@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/tanmen/jest-reporter/compare/v1.0.3...v1.0.4) (2023-05-08)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump typescript from 3.9.9 to 4.9.5 ([214355e](https://github.com/tanmen/jest-reporter/commit/214355e59a28fdf82cf41022ebb3aa960752e291))
+
 ## [1.0.3](https://github.com/tanmen/jest-reporter/compare/v1.0.2...v1.0.3) (2023-05-02)
 
 
