@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/tanmen/jest-reporter/compare/v1.0.4...v1.0.5) (2023-05-08)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump depcheck from 0.9.2 to 1.4.3 ([719d967](https://github.com/tanmen/jest-reporter/commit/719d96758570dc1567d284313c582176bd882db2))
+
 ## [1.0.4](https://github.com/tanmen/jest-reporter/compare/v1.0.3...v1.0.4) (2023-05-08)
 
 
