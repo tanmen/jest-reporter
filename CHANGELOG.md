@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/tanmen/jest-reporter/compare/v1.0.5...v1.0.6) (2023-05-08)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump ts-jest from 26.5.4 to 26.5.6 ([caa8097](https://github.com/tanmen/jest-reporter/commit/caa8097e540d2a7769bd316cd58b4b88de4a9b72))
+
 ## [1.0.5](https://github.com/tanmen/jest-reporter/compare/v1.0.4...v1.0.5) (2023-05-08)
 
 
