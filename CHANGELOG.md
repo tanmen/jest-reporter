@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/tanmen/jest-reporter/compare/v1.0.7...v1.0.8) (2023-05-15)
+
+
+### Bug Fixes
+
+* **deps:** bump @jest/test-result from 26.6.2 to 29.5.0 ([b3bbf50](https://github.com/tanmen/jest-reporter/commit/b3bbf50fb067b406420bbdf76e4d0f64e97aa7aa))
+
 ## [1.0.7](https://github.com/tanmen/jest-reporter/compare/v1.0.6...v1.0.7) (2023-05-15)
 
 
