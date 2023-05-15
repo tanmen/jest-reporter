@@ -1,3 +1,11 @@
+## [1.0.7](https://github.com/tanmen/jest-reporter/compare/v1.0.6...v1.0.7) (2023-05-15)
+
+
+### Bug Fixes
+
+* **deps:** bump @actions/github from 5.0.1 to 5.1.1 ([27796c8](https://github.com/tanmen/jest-reporter/commit/27796c89b0fbfdb9b11bc67665aa674cf5543d65))
+* **deps:** bump fs-extra and @types/fs-extra ([6965bf4](https://github.com/tanmen/jest-reporter/commit/6965bf4f16110faa3a92f641d278f688e60b3bde))
+
 ## [1.0.6](https://github.com/tanmen/jest-reporter/compare/v1.0.5...v1.0.6) (2023-05-08)
 
 
