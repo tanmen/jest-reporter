@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/tanmen/jest-reporter/compare/v1.0.8...v1.0.9) (2023-05-22)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump typesync from 0.11.0 to 0.11.1 ([935480b](https://github.com/tanmen/jest-reporter/commit/935480b6af4123d355d9374a014b590792962ae9))
+
 ## [1.0.8](https://github.com/tanmen/jest-reporter/compare/v1.0.7...v1.0.8) (2023-05-15)
 
 
