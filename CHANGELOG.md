@@ -1,3 +1,12 @@
+## [1.0.13](https://github.com/tanmen/jest-reporter/compare/v1.0.12...v1.0.13) (2023-06-12)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @semantic-release/commit-analyzer ([179e721](https://github.com/tanmen/jest-reporter/commit/179e721f0e6f33fcedfd136db1cf833cee3de2c6))
+* **deps-dev:** bump @semantic-release/npm from 10.0.3 to 10.0.4 ([e072d19](https://github.com/tanmen/jest-reporter/commit/e072d19ea96ea982f483c5766dd52a8ff5bb44f3))
+* **deps-dev:** bump semantic-release from 21.0.3 to 21.0.5 ([8588950](https://github.com/tanmen/jest-reporter/commit/85889507cd19ed7dd64aedfd2dde9ca0da8bf85a))
+
 ## [1.0.12](https://github.com/tanmen/jest-reporter/compare/v1.0.11...v1.0.12) (2023-06-05)
 
 
