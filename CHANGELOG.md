@@ -1,3 +1,10 @@
+## [1.0.14](https://github.com/tanmen/jest-reporter/compare/v1.0.13...v1.0.14) (2023-06-12)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @semantic-release/github from 9.0.2 to 9.0.3 ([dfb510c](https://github.com/tanmen/jest-reporter/commit/dfb510c8b2f922e0511870d55a55cd821d1ed2dd))
+
 ## [1.0.13](https://github.com/tanmen/jest-reporter/compare/v1.0.12...v1.0.13) (2023-06-12)
 
 
