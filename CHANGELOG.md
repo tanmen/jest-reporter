@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/tanmen/jest-reporter/compare/v1.0.14...v1.0.15) (2023-06-12)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @semantic-release/release-notes-generator ([e33ea33](https://github.com/tanmen/jest-reporter/commit/e33ea33d21ee0d07bb1484bab62dd8441401af6d))
+
 ## [1.0.14](https://github.com/tanmen/jest-reporter/compare/v1.0.13...v1.0.14) (2023-06-12)
 
 
