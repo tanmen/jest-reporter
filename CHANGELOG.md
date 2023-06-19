@@ -1,3 +1,10 @@
+## [1.0.16](https://github.com/tanmen/jest-reporter/compare/v1.0.15...v1.0.16) (2023-06-19)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @types/uuid from 9.0.1 to 9.0.2 ([41e87f6](https://github.com/tanmen/jest-reporter/commit/41e87f6a5d942f7b04994f780c45425fe0e0109f))
+
 ## [1.0.15](https://github.com/tanmen/jest-reporter/compare/v1.0.14...v1.0.15) (2023-06-12)
 
 
