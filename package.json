@@ -33,7 +33,7 @@
     "@types/jest": "^26.0.0",
     "@types/semantic-release": "^20.0.1",
     "@types/strip-ansi": "^5.2.1",
-    "@types/uuid": "^9.0.1",
+    "@types/uuid": "^9.0.2",
     "@vercel/ncc": "^0.36.1",
     "depcheck": "^1.4.3",
     "jest": "^26.1.0",
