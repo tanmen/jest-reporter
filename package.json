@@ -1,6 +1,6 @@
 {
   "name": "jest-reporter",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "private": true,
   "main": "dist/index.js",
   "author": "tanmen <yt.prog@gmail.com>",
