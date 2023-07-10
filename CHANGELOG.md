@@ -1,3 +1,11 @@
+## [1.0.18](https://github.com/tanmen/jest-reporter/compare/v1.0.17...v1.0.18) (2023-07-10)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @semantic-release/release-notes-generator ([f28ed96](https://github.com/tanmen/jest-reporter/commit/f28ed9620c468d481a3230630d3125fd24a53be2))
+* **deps:** bump @jest/test-result from 29.5.0 to 29.6.1 ([2949017](https://github.com/tanmen/jest-reporter/commit/29490177e06a4a3f5a3e5006be60be6630f573a4))
+
 ## [1.0.17](https://github.com/tanmen/jest-reporter/compare/v1.0.16...v1.0.17) (2023-07-03)
 
 
