@@ -1,3 +1,10 @@
+## [1.0.20](https://github.com/tanmen/jest-reporter/compare/v1.0.19...v1.0.20) (2023-07-11)
+
+
+### Bug Fixes
+
+* **deps:** bump semver from 5.7.1 to 5.7.2 ([a971a9f](https://github.com/tanmen/jest-reporter/commit/a971a9fb3566ee733808a31daec3cf89250e9033))
+
 ## [1.0.19](https://github.com/tanmen/jest-reporter/compare/v1.0.18...v1.0.19) (2023-07-10)
 
 
