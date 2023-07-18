@@ -1,3 +1,10 @@
+## [1.0.22](https://github.com/tanmen/jest-reporter/compare/v1.0.21...v1.0.22) (2023-07-18)
+
+
+### Bug Fixes
+
+* **deps:** bump word-wrap from 1.2.3 to 1.2.4 ([bf44488](https://github.com/tanmen/jest-reporter/commit/bf44488e131a37ce3f712b83329d48ce499ec0a7))
+
 ## [1.0.21](https://github.com/tanmen/jest-reporter/compare/v1.0.20...v1.0.21) (2023-07-17)
 
 
