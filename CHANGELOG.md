@@ -1,3 +1,10 @@
+## [1.0.29](https://github.com/tanmen/jest-reporter/compare/v1.0.28...v1.0.29) (2023-09-04)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @semantic-release/commit-analyzer ([f1bc9da](https://github.com/tanmen/jest-reporter/commit/f1bc9dadfa8d85c116565dbf47588bcb4baf62d3))
+
 ## [1.0.28](https://github.com/tanmen/jest-reporter/compare/v1.0.27...v1.0.28) (2023-09-04)
 
 
