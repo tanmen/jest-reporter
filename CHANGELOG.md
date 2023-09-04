@@ -1,3 +1,11 @@
+## [1.0.28](https://github.com/tanmen/jest-reporter/compare/v1.0.27...v1.0.28) (2023-09-04)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @semantic-release/release-notes-generator ([2dbe6ce](https://github.com/tanmen/jest-reporter/commit/2dbe6ce0a95c203d3a9edd8b465afd8e9bb55f98))
+* **deps-dev:** bump @types/uuid from 9.0.2 to 9.0.3 ([93cb3ba](https://github.com/tanmen/jest-reporter/commit/93cb3ba1c5bc5c6e555ca886a1eeaa5fb90b16ce))
+
 ## [1.0.27](https://github.com/tanmen/jest-reporter/compare/v1.0.26...v1.0.27) (2023-09-04)
 
 
