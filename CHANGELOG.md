@@ -1,3 +1,10 @@
+## [1.0.26](https://github.com/tanmen/jest-reporter/compare/v1.0.25...v1.0.26) (2023-09-04)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/checkout from 3 to 4 ([a56bd1b](https://github.com/tanmen/jest-reporter/commit/a56bd1b95391b2ca185b60c2cde67d3e82ca908d))
+
 ## [1.0.25](https://github.com/tanmen/jest-reporter/compare/v1.0.24...v1.0.25) (2023-08-28)
 
 
