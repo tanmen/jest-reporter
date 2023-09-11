@@ -1,3 +1,11 @@
+## [1.0.30](https://github.com/tanmen/jest-reporter/compare/v1.0.29...v1.0.30) (2023-09-11)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump @semantic-release/github from 9.0.4 to 9.0.5 ([0aaa96f](https://github.com/tanmen/jest-reporter/commit/0aaa96f8b9dbd24122c317ea1665fd4de91ade29))
+* **deps-dev:** bump @vercel/ncc from 0.36.1 to 0.38.0 ([eeca4ee](https://github.com/tanmen/jest-reporter/commit/eeca4eeb885b36452c35faf83e3ffdf4d94a2a8a))
+
 ## [1.0.29](https://github.com/tanmen/jest-reporter/compare/v1.0.28...v1.0.29) (2023-09-04)
 
 
