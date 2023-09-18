@@ -35,7 +35,7 @@
     "@types/strip-ansi": "^5.2.1",
     "@types/uuid": "^9.0.3",
     "@vercel/ncc": "^0.38.0",
-    "depcheck": "^1.4.5",
+    "depcheck": "^1.4.6",
     "jest": "^26.1.0",
     "jest-watch-typeahead": "^0.6.0",
     "semantic-release": "^21.1.1",
