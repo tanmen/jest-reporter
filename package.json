@@ -20,7 +20,7 @@
     "@jest/test-result": "^29.7.0",
     "fs-extra": "^11.1.1",
     "strip-ansi": "^6.0.0",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
@@ -33,7 +33,7 @@
     "@types/jest": "^26.0.0",
     "@types/semantic-release": "^20.0.1",
     "@types/strip-ansi": "^5.2.1",
-    "@types/uuid": "^9.0.3",
+    "@types/uuid": "^9.0.4",
     "@vercel/ncc": "^0.38.0",
     "depcheck": "^1.4.6",
     "jest": "^26.1.0",
