@@ -6450,10 +6450,10 @@ semantic-release-major-tag@^0.3.2:
   resolved "https://registry.yarnpkg.com/semantic-release-major-tag/-/semantic-release-major-tag-0.3.2.tgz#9ea6b7139721fa58e8a76382adafe165d56a4b90"
   integrity sha512-XTB3mVG6D6oPHSW/zhWC3eSoBRiLqZjKtjTc90wcLzS0DG00UORnn7CceDGdYc5dIl0BG91eO873HvECimyE+Q==
 
-semantic-release@^22.0.10:
-  version "22.0.10"
-  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-22.0.10.tgz#e1fbef4878a60cd350d036e286e5cfc752cff14d"
-  integrity sha512-4ahPaOX+0UYpYlosjc/tfCzB/cqlnjN0/xSKGryEC4bOpuYSkoK+QHw7xDPmAuiMNBBvkFD+m3aVMENUr++CIg==
+semantic-release@^22.0.12:
+  version "22.0.12"
+  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-22.0.12.tgz#b8dd1a096b597080e05f30554ee5d128fe6dac84"
+  integrity sha512-0mhiCR/4sZb00RVFJIUlMuiBkW3NMpVIW2Gse7noqEMoFGkvfPPAImEQbkBV8xga4KOPP4FdTRYuLLy32R1fPw==
   dependencies:
     "@semantic-release/commit-analyzer" "^11.0.0"
     "@semantic-release/error" "^4.0.0"
