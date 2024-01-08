@@ -7200,10 +7200,10 @@ typescript@^4.9.5:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
   integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
 
-typesync@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/typesync/-/typesync-0.12.0.tgz#39b48ff347913eee633db1904f383c93daddb5cf"
-  integrity sha512-RQU/02Rm6u2bQHlDvqCvWUeNbo20J3J01pzj0Uso2MtUVyNaJHDOhK1AKrxu8Ael93+Ek7ek7xkFi5e0CxeOjA==
+typesync@^0.12.1:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/typesync/-/typesync-0.12.1.tgz#66b22539889d2ad9a1c183ec9892c346803a1bfa"
+  integrity sha512-BX3RBZzBzYtHaNTDqc7vq6gUehJqhl34c3DFr67/FXTV6kz9Q6FiravII5HpJfeSE2iDz2Lhm5/YdlDlQbezLQ==
   dependencies:
     awilix "^9.0.0"
     chalk "^4.1.2"
