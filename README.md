@@ -5,11 +5,20 @@ Creates annotations based on the output of json (see [how to configure `jest` pr
 
 <kbd>.github/workflows/your-workflow.yml</kbd>
 ```
-    - run: jest --json --outputFile=result.json --testLocationInResults
-    - uses: tanmen/jest-reporter@v1
-      if: always()
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+  workflow-test-step:
+    permissions:
+      contents: read
+      pull-requests: read
+      checks: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: jest --json --outputFile=result.json --testLocationInResults
+      - uses: tanmen/jest-reporter@v1
+        if: always()
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 ``` 
 
 ## Inputs
