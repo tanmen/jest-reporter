@@ -42,7 +42,6 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-          token: ${{ secrets.GH_TOKEN }}
       - name: Enable Corepack
         run: corepack enable
       - uses: actions/setup-node@v4
@@ -53,6 +52,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Release
-        run: yarn semantic-release
+        run: yarn semantic-release --ci
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
