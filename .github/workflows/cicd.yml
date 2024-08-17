@@ -8,11 +8,19 @@ jobs:
   tests:
     strategy:
       matrix:
-        version: [16.x, 18.x]
+        version: [18.x, 20.x, 22.x]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: yarn
+      - name: Enable Corepack
+        run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+          cache: 'yarn'
+          cache-dependency-path: 'yarn.lock'
+      - name: Install dependencies
+        run: yarn install --immutable
       - run: yarn build
       - run: yarn test --json --outputFile=result.json --testLocationInResults
       - uses: ./
@@ -35,14 +43,15 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Enable Corepack
+        run: corepack enable
+      - uses: actions/setup-node@v4
         with:
           node-version-file: '.node-version'
           cache: 'yarn'
           cache-dependency-path: 'yarn.lock'
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --prefer-offline
+        run: yarn install --immutable
       - name: Release
         run: yarn semantic-release
         env:
