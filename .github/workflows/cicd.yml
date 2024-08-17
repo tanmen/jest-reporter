@@ -6,6 +6,8 @@ on:
 
 jobs:
   tests:
+    permissions:
+      checks: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,7 +25,7 @@ jobs:
       - uses: ./
         if: always()
         with:
-          action-name: jest report (${{ matrix.version }})
+          action-name: jest report
           github-token: ${{ secrets.GITHUB_TOKEN }}
   release:
     if: ${{ github.event_name != 'pull_request' }}
