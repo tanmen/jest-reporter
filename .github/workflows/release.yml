@@ -1,35 +1,11 @@
-name: CI/CD
+name: Release
 on:
   push:
     branches: [ main ]
   pull_request: {}
 
 jobs:
-  Test:
-    permissions:
-      checks: write
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Enable Corepack
-        run: corepack enable
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: '.node-version'
-          cache: 'yarn'
-          cache-dependency-path: 'yarn.lock'
-      - name: Install dependencies
-        run: yarn install --immutable
-      - run: yarn build
-      - run: yarn test --json --outputFile=result.json --testLocationInResults
-      - uses: ./
-        if: always()
-        with:
-          action-name: jest report
-          github-token: ${{ secrets.GITHUB_TOKEN }}
   Release:
-    if: ${{ github.event_name != 'pull_request' }}
-    needs: [ Test ]
     runs-on: ubuntu-latest
     permissions:
       contents: write # to be able to publish a GitHub release
