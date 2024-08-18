@@ -5,10 +5,6 @@
   "main": "dist/index.js",
   "author": "tanmen <yt.prog@gmail.com>",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/tanmen/jest-reporter.git"
-  },
   "scripts": {
     "postinstall": "typesync",
     "prebuild": "depcheck",
@@ -42,7 +38,6 @@
     "depcheck": "^1.4.7",
     "jest": "^26.1.0",
     "jest-watch-typeahead": "^2.2.2",
-    "semantic-release": "^24.0.0",
     "semantic-release-major-tag": "^0.3.2",
     "ts-jest": "^26.5.6",
     "typescript": "^4.9.5",

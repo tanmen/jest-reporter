@@ -52,6 +52,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Release
-        run: yarn semantic-release --ci
+        run: npx semantic-release
         env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
