@@ -5,7 +5,7 @@ on:
   pull_request: {}
 
 jobs:
-  tests:
+  Test:
     permissions:
       checks: write
     runs-on: ubuntu-latest
@@ -27,9 +27,9 @@ jobs:
         with:
           action-name: jest report
           github-token: ${{ secrets.GITHUB_TOKEN }}
-  release:
+  Release:
     if: ${{ github.event_name != 'pull_request' }}
-    needs: [ tests ]
+    needs: [ Test ]
     runs-on: ubuntu-latest
     permissions:
       contents: write # to be able to publish a GitHub release
