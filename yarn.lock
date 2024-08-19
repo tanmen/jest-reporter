@@ -4922,7 +4922,7 @@ __metadata:
     strip-ansi: "npm:^6.0.0"
     ts-jest: "npm:^26.5.6"
     typescript: "npm:^5.5.4"
-    typesync: "npm:^0.12.1"
+    typesync: "npm:^0.13.0"
     uuid: "npm:^10.0.0"
   languageName: unknown
   linkType: soft
@@ -8081,21 +8081,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typesync@npm:^0.12.1":
-  version: 0.12.2
-  resolution: "typesync@npm:0.12.2"
+"typesync@npm:^0.13.0":
+  version: 0.13.0
+  resolution: "typesync@npm:0.13.0"
   dependencies:
     awilix: "npm:^10.0.2"
     chalk: "npm:^4.1.2"
     cosmiconfig: "npm:^9.0.0"
     detect-indent: "npm:^6.0.0"
     glob: "npm:^10.4.2"
+    js-yaml: "npm:^4.1.0"
     npm-registry-fetch: "npm:^17.1.0"
     ora: "npm:^5.1.0"
     semver: "npm:^7.6.2"
   bin:
     typesync: bin/typesync
-  checksum: 10c0/1b841e23d3836dd0916c7693ca5d210db7cc00c77d0c02521d2efaa0dd8003f9a7e1a214b6da97560747548ec487a17eae9072858a9a6f181f6f5550359a8c3d
+  checksum: 10c0/fb49eabf76f01196ce4905f1850ca2ee86ae9b3b2855e32b8eaaa220ee11000eea5265968ff22128dc0df862a0c1a3f46ac49be941e7215e03f6226deb7464a6
   languageName: node
   linkType: hard
 
