@@ -20,7 +20,7 @@
     "@jest/test-result": "^29.7.0",
     "fs-extra": "^11.2.0",
     "strip-ansi": "^6.0.0",
-    "uuid": "^11.0.1"
+    "uuid": "^11.0.2"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
