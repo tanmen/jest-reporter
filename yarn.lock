@@ -4888,7 +4888,7 @@ __metadata:
     strip-ansi: "npm:^6.0.0"
     ts-jest: "npm:^26.5.6"
     typescript: "npm:^5.6.3"
-    typesync: "npm:^0.13.3"
+    typesync: "npm:^0.13.4"
     uuid: "npm:^11.0.3"
   languageName: unknown
   linkType: soft
@@ -8019,9 +8019,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typesync@npm:^0.13.3":
-  version: 0.13.3
-  resolution: "typesync@npm:0.13.3"
+"typesync@npm:^0.13.4":
+  version: 0.13.4
+  resolution: "typesync@npm:0.13.4"
   dependencies:
     awilix: "npm:^10.0.2"
     chalk: "npm:^4.1.2"
@@ -8034,7 +8034,7 @@ __metadata:
     semver: "npm:^7.6.2"
   bin:
     typesync: bin/typesync
-  checksum: 10c0/0ebed5df63cdd22ef8d093aea30441adf7306c953eb61b06dff9b36b2f63b81d068ce97511330636c4a2131ebfa84cf311c7f0784a7db985901c8d8ddf815b24
+  checksum: 10c0/abf457dcf1628446d630a75ffde27cb0aede56d47270b4495d8e11af808c8bfaeef96b01956d6a124ce7814d6c566e1d8b2f5f051b9dc289ffafc2f4fd07c2f5
   languageName: node
   linkType: hard
 
