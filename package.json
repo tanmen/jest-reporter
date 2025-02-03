@@ -41,7 +41,7 @@
     "semantic-release-major-tag": "^0.3.2",
     "ts-jest": "^26.5.6",
     "typescript": "^5.7.3",
-    "typesync": "^0.14.0"
+    "typesync": "^0.14.1"
   },
   "packageManager": "yarn@4.4.0"
 }
