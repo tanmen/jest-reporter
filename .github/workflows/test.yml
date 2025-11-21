@@ -10,7 +10,7 @@ jobs:
       checks: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Enable Corepack
         run: corepack enable
       - uses: actions/setup-node@v6
